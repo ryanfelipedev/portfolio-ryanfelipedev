@@ -2,7 +2,7 @@ import Logo from "../assets/icons/ryan-logo1.svg"
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md shadow-sm">
+    <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm shadow-sm">
       <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* LOGO / NOME */}
         <div className="flex items-center gap-1.5">
@@ -47,7 +47,7 @@ export default function Header() {
 
         {/* MENU MOBILE */}
         <div className="md:hidden">
-          <button className="text-3xl text-black-700 hover:text-blue-600 transition">
+          <button className="text-3xl text-white hover:text-[#9A6DFF] transition">
             ☰
           </button>
         </div>
