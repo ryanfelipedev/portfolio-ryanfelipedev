@@ -3,8 +3,10 @@ import Header from "./components/Headers";
 
 const App = () => {
   return (
-      <Header/>
-  )
-}
+    <>
+      <Header />
+    </>
+  );
+};
 
-export default App
+export default App;
