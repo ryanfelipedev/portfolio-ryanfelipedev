@@ -1,4 +1,4 @@
-import { Button } from "./ui/button";
+import { Button } from "@heroui/button"
 import { TypographyH3 } from "@/components/ui/typography";
 import { TypographyH4 } from "@/components/ui/typography";
 import { TypographyP } from "@/components/ui/typography";
@@ -38,7 +38,7 @@ export default function Header() {
         </ul>
 
         {/* BOTÃO */}
-        <Button variant="destructive" className="hidden md:inline-block bg-[#BE3144] text-white px-4 py-2 rounded-md border border-gray-500" asChild>
+        <Button className="px-4 h-9 bg-linear-to-tr from-[#BE3144] to-[#3486c3] text-[#e0e1dd] shadow-lg rounded-md" radius="full" asChild>
           <a href="#contato">Contato</a>
         </Button> 
 
