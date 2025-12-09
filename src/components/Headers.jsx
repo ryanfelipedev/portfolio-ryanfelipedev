@@ -5,50 +5,50 @@ import { TypographyP } from "@/components/ui/typography";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-sm shadow-sm">
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-5xl h-17 z-50 bg-white/10 backdrop-blur-md border border-white/20 rounded-full shadow-xl flex items-center justify-between px-6">
 
-        {/* NOME */}
-        <div className="flex items-center gap-1.5">
+        {/* LOGO + NOME */}
+        <div className="flex items-center gap-2 ml-10">
+          <TypographyH4 className="text-rose-700 cursor-pointer">
+            <span>&lt;/&gt;</span>
+          </TypographyH4>
 
-            <TypographyH4 className="text-[#BE3144] cursor-pointer">
-              <span>&lt;/&gt;</span>
+          <div className="flex flex-col items-start">
+            <TypographyH4 className="text-[#e0e1dd] cursor-pointer !leading-none !mb-1">
+              Ryan Felipe
             </TypographyH4>
 
-
-            {/* Nome */}
-            <div className="flex flex-col leading-tight">
-              <TypographyH3 className="text-[#e0e1dd] cursor-pointer">
-                Ryan Felipe
-              </TypographyH3>
-              
-              <TypographyP className="text-gray-400 text-sm ml-2 cursor-pointer">
-                Desenvolvedor Full-Stack<span className="text-[#3486c3]">.</span>
-              </TypographyP>
-            </div>
-
+            <TypographyP className="text-gray-400 text-[13px] cursor-pointer !leading-none !mt-0 -mt-1">
+              Desenvolvedor Full-Stack
+              <span className="text-rose-700">.</span>
+            </TypographyP>
+          </div>
         </div>
 
 
-        {/* MENU (desktop - web) */}
+        {/* MENU DESKTOP */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium">
-          <li className="hover:text-[#BE3144] transition cursor-pointer"><a href="#home">Home</a></li>
-          <li className="hover:text-[#BE3144] transition cursor-pointer"><a href="#sobre">Sobre</a></li>
-          <li className="hover:text-[#BE3144] transition cursor-pointer"><a href="#projetos">Projetos</a></li>
+          <li className="hover:text-[#BE3144] transition cursor-pointer">
+            <a href="#home">Home</a>
+          </li>
+          <li className="hover:text-[#BE3144] transition cursor-pointer">
+            <a href="#sobre">Sobre</a>
+          </li>
+          <li className="hover:text-[#BE3144] transition cursor-pointer">
+            <a href="#projetos">Projetos</a>
+          </li>
         </ul>
 
-        {/* BOTÃO */}
-        <Button className="px-4 h-9 bg-linear-to-tr from-[#BE3144] to-[#3486c3] text-[#e0e1dd] shadow-lg rounded-md" radius="full" asChild>
-          <a href="#contato">Contato</a>
-        </Button> 
+        {/* BOTÃO DESKTOP */}
+        <Button radius="full" asChild className="hidden md:inline-flex px-4 h-9 bg-rose-700 text-[#e0e1dd] font-bold shadow-lg rounded-full mr-10" > 
+          <a className="flex item-center justify-center w-full" href="#contato"> Contato </a> 
+        </Button>
 
-        {/* MENU (mOBILE) */}
-        <div className="md:hidden">
-          <button className="text-3xl text-[#BE3144]  transition">
-            ☰
-          </button>
-        </div>
-      </nav>
-    </header>
+        {/* MENU MOBILE */}
+        <button className="md:hidden text-3xl text-[#BE3144] hover:text-sky-400 transition cursor-pointer">
+          ☰
+        </button>
+</header>
+
   );
 }

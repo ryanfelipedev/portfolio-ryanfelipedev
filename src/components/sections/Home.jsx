@@ -1,14 +1,37 @@
+import { AuroraText } from "../ui/aurora-text";
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-4">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center px-4"
+    >
       <div className="text-center">
+        {/* Animando o Título */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4 }}
+        >
+          <AuroraText className="text-5xl font-bold">
+            Bem-Vindo(a) ao meu Portfólio
+          </AuroraText>
 
-        <h1 className="text-4xl text-[#e0e1dd] font-bold">Bem-vindo ao meu portfólio</h1>
+          <span className="text-5xl"> 👨🏽‍💻</span>
+        </motion.div>
 
-        <p className="text-lg text-gray-400 mt-2">
-          Eu sou Ryan Felipe, Desenvolvedor de Software.
-        </p>
+        {/* Animando o subtítulo */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 4, delay: 0.5 }}
+          className="text-2xl text-blue-100 mt-2"
+        >
+          Me chamo Ryan e sou Desenvolvedor de Software.
+        </motion.h1>
 
+        
       </div>
     </section>
   );
