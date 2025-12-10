@@ -1,8 +1,8 @@
 import { TypographyH1, TypographyH2, TypographyH4 } from "../ui/typography";
 import MinhaImagem from "@/assets/images/Imagem-Pixelada.png";
-import Reveal from "../Reveal"
 import {motion, useInView} from "framer-motion"
 import {useRef} from "react"
+import SplitText from "../SplitText";
 
 export default function Home() {
   const ref = useRef(null);
@@ -15,7 +15,7 @@ export default function Home() {
     >
 
       <motion.div
-        ref={ref}
+        ref={ref} 
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
@@ -31,9 +31,16 @@ export default function Home() {
             viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <TypographyH1 className="text-[#e0e1dd] text-center md:text-center sm:text-nowrap break-words">
-              Bem vindo(a) ao meu 
-            </TypographyH1>
+            <SplitText
+              text="</Bem vindo(a) ao meu"
+              className="text-3xl md:text-4xl font-bold text-[#e0e1dd] text-center"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              delay={0.05}
+              duration={0.3}
+              tag="h1"
+            />
+
           </motion.div>
 
           <motion.div
@@ -43,8 +50,9 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <TypographyH2 className="text-[#e0e1dd] text-center md:text-center">
-              <span className="text-sky-700">Portfolio</span> WebSite <span className="text-sky-700">!</span>
+              <span className="text-sky-700">Portfolio</span> WebSite <span className="text-sky-700"><span className="text-3xl md:text-4xl font-bold text-[#e0e1dd] text-center">\&gt;</span></span>
             </TypographyH2>
+            
           </motion.div>
         </div>
 

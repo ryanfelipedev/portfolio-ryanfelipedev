@@ -12,6 +12,7 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@gsap/react": "^2.1.2",
     "@heroui/button": "^2.2.27",
     "@heroui/react": "^2.8.5",
     "@mui/material": "^7.3.6",
@@ -23,6 +24,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
+    "gsap": "^3.14.1",
     "lucide-react": "^0.555.0",
     "motion": "^12.23.26",
     "ogl": "^1.0.11",
