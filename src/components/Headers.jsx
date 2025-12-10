@@ -37,7 +37,7 @@ export default function Header() {
         </ul>
 
         {/* BOTÃO */}
-        <Button className="hidden md:inline-block bg-[#BE3144] hover:bg-[#BE3144] transition duration-300 hover:-translate-y-1 text-white px-4 py-2 mr-8 rounded-md border border-gray-500" asChild>
+        <Button className="hidden md:inline-block bg-[#BE3144] hover:bg-[#BE3144] transition duration-300 hover:-translate-y-1 text-white px-3 py-1 mr-8 rounded-md border border-gray-500" asChild>
           <a href="#contato">Contato</a>
         </Button>
       </nav>

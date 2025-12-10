@@ -1,7 +1,19 @@
+import {motion} from "framer-motion"
+
+
 export default function Contato() {
   return (
     <section id="contato" className="min-h-screen flex items-center justify-center px-4">
+
       <div className="max-w-lg w-full">
+
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.5 }}
+        >
+
         <h2 className="text-3xl font-bold mb-6 text-center">Entre em Contato</h2>
 
         <form className="space-y-4">
@@ -13,7 +25,10 @@ export default function Contato() {
             Enviar
           </button>
         </form>
+          
+        </motion.div>
       </div>
+
     </section>
   );
 }

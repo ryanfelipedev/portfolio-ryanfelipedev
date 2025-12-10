@@ -1,4 +1,5 @@
 import React from "react";
+// import { motion } from "framer-motion";
 import Header from "./components/Headers";
 import Home from "./components/sections/Home";
 import Sobre from "./components/sections/Sobre";
@@ -9,6 +10,7 @@ const App = () => {
   return (
     <>
 
+      
       
 
       {/*  CONTEÚDO */}
