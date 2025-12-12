@@ -4,7 +4,7 @@ import { TypographyH3, TypographyH4, TypographyP } from "@/components/ui/typogra
 export default function Header() {
   return (
     <header className="fixed top-4 left-0 w-full z-50">
-      <nav className="w-[65%] mx-auto px-7 py-2 flex items-center justify-between rounded-full bg-white/10 backdrop-blur-sm border border-gray-400/50">
+      <nav className="w-[65%] mx-auto px-7 py-2 flex items-center justify-between rounded-full bg-transparent backdrop-blur-sm border border-gray-400/50">
 
         {/* LOGO + NOME */}
         <div className="flex items-center gap-2 ml-10">
