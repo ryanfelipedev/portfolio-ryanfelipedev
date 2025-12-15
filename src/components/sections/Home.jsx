@@ -10,17 +10,19 @@ export default function Home() {
   const isInView = useInView(ref,{once:false, margin: "-100px"})
 
   return (
-    <section id="home" className="w-full pt-45 -pb-10">
+    <section id="home" className="w-full pt-44 pb-10">
       {/* BackGround  */}
       <div className="absolute inset-0 -z-10 opacity-40 pointer-events-none">
         <Galaxy
-          mouseRepulsion={true}
-          mouseInteraction={true}
-          density={1.4}
+          mouseRepulsion={false}
+          mouseInteraction={false}
+          density={0.6} 
+          glowIntensity={0.3}
+          twinkleIntensity={0.25}
           hueShift={220}
-          glowIntensity={0.4}
           saturation={0}
-          twinkleIntensity={0.3}
+          quality="low"
+          static={true}
         />
       </div>
 

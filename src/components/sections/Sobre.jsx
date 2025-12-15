@@ -3,9 +3,8 @@ import SplitText from "../SplitText";
 export default function Sobre() {
 
   return (
-    <section id="sobre" className="min-h-screen flex items-center justify-center px-4">
+    <section id="sobre" className="relative min-h-screen flex items-center justify-center px-7">
 
-      
       <SplitText
         text="Sobre mim"
         className="text-4xl md:text-5xl font-bold text-center text-[#e0e1dd]"
