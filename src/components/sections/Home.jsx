@@ -133,42 +133,43 @@ export default function Home() {
 
           {/* BOTÕES  */}
           <div className="flex gap-4 mt-2">
-            <button className="inline-flex items-center transition duration-300 hover:-translate-y-2 hover:bg-[#6734de] hover:border-sky-700 px-4 h-9 bg-transparent backdrop-blur-md border border-white font-bold rounded-full text-[#e0e1dd] cursor-pointer gap-3">
-              <svg
-                className="w-4 h-6 text-[#e0e1dd]"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 18 18"
-              >
-                <path d="M17 0h-5.768a1 1 0 1 0 0 2h3.354L8.4 8.182A1.003 1.003 0 1 0 9.818 9.6L16 3.414v3.354a1 1 0 0 0 2 0V1a1 1 0 0 0-1-1Z" />
-                <path d="m14.258 7.985-3.025 3.025A3 3 0 1 1 6.99 6.768l3.026-3.026A3.01 3.01 0 0 1 8.411 2H2.167A2.169 2.169 0 0 0 0 4.167v11.666A2.169 2.169 0 0 0 2.167 18h11.666A2.169 2.169 0 0 0 16 15.833V9.589a3.011 3.011 0 0 1-1.742-1.604Z" />
-              </svg>
-              <a href="#sobre" className="text-nowrap">
-                Saiba Mais
-              </a>
-            </button>
+            <a href="#sobre" className="text-nowrap">
+              <button className="inline-flex items-center transition duration-300 hover:-translate-y-2 hover:bg-[#6734de] hover:border-sky-700 px-4 h-9 bg-transparent backdrop-blur-md border border-white font-bold rounded-full text-[#e0e1dd] cursor-pointer gap-3">
+                <svg
+                  className="w-4 h-6 text-[#e0e1dd]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 18 18"
+                >
+                  <path d="M17 0h-5.768a1 1 0 1 0 0 2h3.354L8.4 8.182A1.003 1.003 0 1 0 9.818 9.6L16 3.414v3.354a1 1 0 0 0 2 0V1a1 1 0 0 0-1-1Z" />
+                  <path d="m14.258 7.985-3.025 3.025A3 3 0 1 1 6.99 6.768l3.026-3.026A3.01 3.01 0 0 1 8.411 2H2.167A2.169 2.169 0 0 0 0 4.167v11.666A2.169 2.169 0 0 0 2.167 18h11.666A2.169 2.169 0 0 0 16 15.833V9.589a3.011 3.011 0 0 1-1.742-1.604Z" />
+                </svg>
+                <span>Saiba Mais</span>
+              </button>
+            </a>
 
-            <button className="inline-flex items-center transition duration-300 hover:-translate-y-2 hover:bg-green-700 hover:border-green-700 px-4 h-9 bg-transparent backdrop-blur-md border border-white font-bold rounded-full text-[#e0e1dd] cursor-pointer gap-3">
-              <svg
-                className="w-4 h-6 text-[#e0e1dd]"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 16 18"
-              >
-                <path
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
-                />
-              </svg>
-              <a href="/docs/Ryan_Curriculo.pdf" download>
-                Currículo
-              </a>
-            </button>
+            <a href="/docs/Ryan_Curriculo.pdf" download>
+              <button className="inline-flex items-center transition duration-300 hover:-translate-y-2 hover:bg-green-700 hover:border-green-700 px-4 h-9 bg-transparent backdrop-blur-md border border-white font-bold rounded-full text-[#e0e1dd] cursor-pointer gap-3">
+                <svg
+                  className="w-4 h-6 text-[#e0e1dd]"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 16 18"
+                >
+                  <path
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
+                  />
+                </svg>
+                <span>Currículo</span>
+              </button>
+            </a>
+
           </div>
         </div>
 

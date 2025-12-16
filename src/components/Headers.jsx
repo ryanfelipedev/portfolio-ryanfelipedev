@@ -1,6 +1,32 @@
 import { Button } from "@heroui/button";
 import { TypographyH4, TypographyP } from "@/components/ui/typography";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+function Dot({ active }) {
+  return (
+    <AnimatePresence>
+      {active && (
+        <motion.span
+          initial={{ opacity: 0, x: -6 }}
+          animate={{ opacity: 1, x: 0 }}
+          exit={{ opacity: 0, x: -6 }}
+          transition={{
+            type: "spring",
+            stiffness: 120,
+            damping: 18,
+          }}
+          className="
+            absolute left-0 top-1/2 -translate-y-1/2
+            text-[#6734de] text-lg leading-none
+          "
+        >
+          •
+        </motion.span>
+      )}
+    </AnimatePresence>
+  );
+}
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home");
@@ -17,22 +43,22 @@ export default function Header() {
         });
       },
       {
-        rootMargin: "-80px 0px -40% 0px", // compensa header fixo
+        rootMargin: "-80px 0px -40% 0px",
         threshold: 0.3,
       }
     );
 
     sections.forEach((section) => observer.observe(section));
-
     return () => observer.disconnect();
   }, []);
 
   const linkClass = (id) =>
-    `transition cursor-pointer ${
-      activeSection === id
-        ? "text-[#6734de]"
-        : "text-white hover:text-[#6734de]"
-    }`;
+    `relative pl-4 transition cursor-pointer
+     ${
+       activeSection === id
+         ? "text-[#6734de]"
+         : "text-white hover:text-[#6734de]"
+     }`;
 
   return (
     <header className="fixed top-4 left-0 w-full z-50">
@@ -68,14 +94,17 @@ export default function Header() {
         {/* MENU DESKTOP */}
         <ul className="hidden md:flex items-center gap-8 text-white font-medium backdrop-blur-sm border border-gray-400/50 px-6 py-3 rounded-full">
           <li className={linkClass("home")}>
+            <Dot active={activeSection === "home"} />
             <a href="#home">Home</a>
           </li>
 
           <li className={linkClass("sobre")}>
+            <Dot active={activeSection === "sobre"} />
             <a href="#sobre">Sobre</a>
           </li>
 
           <li className={linkClass("projetos")}>
+            <Dot active={activeSection === "projetos"} />
             <a href="#projetos">Projetos</a>
           </li>
         </ul>
