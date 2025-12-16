@@ -3,8 +3,11 @@ import SplitText from "../SplitText";
 export default function Sobre() {
 
   return (
-    <section id="sobre" className="relative min-h-screen flex items-center justify-center px-7">
-
+    <section 
+    id="sobre" 
+    className="relative bg-[#06000f] flex items-center justify-center py-42 px-7"
+    >
+      
       <SplitText
         text="Sobre mim"
         className="text-4xl md:text-5xl font-bold text-center text-[#e0e1dd]"
@@ -18,4 +21,3 @@ export default function Sobre() {
     </section>
   );
 }
-
