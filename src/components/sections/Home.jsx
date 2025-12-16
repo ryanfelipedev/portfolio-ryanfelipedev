@@ -42,8 +42,19 @@ export default function Home() {
         <div className="flex flex-col gap-7 order-2 md:order-1">
           <div className="flex flex-col gap-2">
             <SplitText
+              text="Olá Me chamo Ryan"
+              className="text-[#e0e1dd] font-bold text-3xl md:text-5xl text-nowrap"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              delay={0.06}
+              duration={0.06}
+              ease="power1.out"
+              tag="h1"
+            />
+
+            <SplitText
               text="Bem vindo(a) ao meu"
-              className="text-[#e0e1dd] font-bold text-3xl md:text-6xl text-nowrap"
+              className="text-[#e0e1dd] font-bold text-3xl md:text-4xl text-nowrap"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
               delay={0.06}
