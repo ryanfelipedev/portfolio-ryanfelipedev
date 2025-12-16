@@ -3,28 +3,14 @@ import MinhaImagem from "@/assets/images/Imagem-Pixelada.png";
 import {motion, useInView} from "framer-motion"
 import {useRef} from "react"
 import SplitText from "../SplitText";
-import Galaxy from "../Galaxy";
 
 export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-200px" });
 
   return (
-    <section id="home" className="w-full pt-30 md:pt-44 pb-10">
-      {/* {isInView && (
-        <div className="absolute inset-0 -z-10 pointer-events-none">
-          <Galaxy
-            mouseInteraction={false}
-            mouseRepulsion={false}
-            density={0.4}
-            glowIntensity={0.1}
-            twinkleIntensity={0.1}
-            hueShift={220}
-            saturation={0}
-          />
-        </div>
-      )} */}
-
+    <section id="home" className="w-full h-[900px] pt-30 md:pt-44 pb-10">
+  
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 120 }}
@@ -57,8 +43,8 @@ export default function Home() {
               className="text-[#e0e1dd] font-bold text-3xl md:text-4xl text-nowrap"
               from={{ opacity: 0, y: 40 }}
               to={{ opacity: 1, y: 0 }}
-              delay={0.06}
-              duration={0.06}
+              delay={0.09}
+              duration={0.07}
               ease="power1.out"
               tag="h1"
             />

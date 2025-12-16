@@ -11,6 +11,13 @@ body{
     background-color: #000000;
 }
 
+.tilted-card-demo-text {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: white;
+}
 
 
 @theme inline {
