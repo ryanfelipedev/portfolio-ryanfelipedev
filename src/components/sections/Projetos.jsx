@@ -1,12 +1,23 @@
 import SplitText from "../ui/SplitText";
+import { Particles } from "@/components/ui/particles"
+
 
 export default function Projetos() {
   return (
     <section 
      id="projetos" 
-     className="relative flex items-center justify-center py-42 px-7"
+     className="relative flex items-center justify-center py-42 px-7 overflow-hidden"
      >
         
+      {/* BACKGROUND  */}
+      <Particles
+        className="absolute inset-0 z-0"
+        quantity={120}
+        ease={81}
+        color="#e0e1dd"
+        refresh
+      />
+
       <SplitText
           text="Projetos"
           gradient
