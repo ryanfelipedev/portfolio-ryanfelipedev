@@ -3,14 +3,26 @@ import MinhaImagem from "@/assets/images/Imagem-Pixelada.png";
 import {motion, useInView} from "framer-motion"
 import {useRef} from "react"
 import SplitText from "../ui/SplitText";
+import { Particles } from "@/components/ui/particles"
 
 export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-200px" });
 
   return (
-    <section id="home" className="w-full h-[900px] pt-30 md:pt-44 pb-10">
-  
+    <section
+      id="home"
+      className="w-full h-[900px] pt-30 md:pt-44 pb-10 overflow-hidden"
+    >
+      {/* BACKGROUND */}
+      <Particles
+        className="absolute inset-0 z-0"
+        quantity={120}
+        ease={81}
+        color="#e0e1dd"
+        refresh
+      />
+
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 120 }}
@@ -84,40 +96,42 @@ export default function Home() {
               </a>
 
               {/* SVG Linkedin*/}
-              <a href="https://www.linkedin.com/in/ryanfelipedecarvalho/" target="blank">
+              <a
+                href="https://www.linkedin.com/in/ryanfelipedecarvalho/"
+                target="blank"
+              >
                 <motion.svg
-                  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
-                  fill="currentColor" aria-hidden="true" className="w-8 h-10
-                  text-[#6734de] duration-300 hover:text-white cursor-pointer" style=
-                  {{ willChange: "transform", display: "inline-block" }}
-                  animate=
-                  {{
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                  className="w-8 h-10
+                  text-[#6734de] duration-300 hover:text-white cursor-pointer"
+                  style={{ willChange: "transform", display: "inline-block" }}
+                  animate={{
                     y: [-6, 6, -6],
                   }}
-                  transition=
-                  {{
+                  transition={{
                     duration: 3.5,
                     repeat: Infinity,
                     repeatType: "loop",
                     ease: "easeInOut",
                     delay: 0.4,
                   }}
-                  >
+                >
                   <path d="M22.23 0H1.77C.79 0 0 .774 0 1.727v20.545C0 23.227.79 24 1.77 24h20.46c.98 0 1.77-.773 1.77-1.728V1.727C24 .774 23.21 0 22.23 0ZM7.09 20.452H3.56V9h3.53v11.452ZM5.325 7.433a2.047 2.047 0 1 1 0-4.094 2.047 2.047 0 0 1 0 4.094ZM20.452 20.452h-3.53v-5.569c0-1.327-.027-3.037-1.85-3.037-1.85 0-2.133 1.445-2.133 2.939v5.667h-3.53V9h3.39v1.561h.047c.472-.9 1.623-1.85 3.338-1.85 3.567 0 4.268 2.35 4.268 5.407v6.334Z" />
                 </motion.svg>
               </a>
-              
             </div>
           </div>
 
           <div className="flex flex-col mb-5">
-
             <TypographyH4 className="text-[#e0e1dd] text-left text-lg leading-relaxed max-w-xl">
               Desenvolvedor{" "}
               <span className="text-[#6734de] font-medium underline decoration-[#6734de]">
                 Full-Stack
               </span>{" "}
-              que transforma ideias em aplicações completas, com foco em {" "}
+              que transforma ideias em aplicações completas, com foco em{" "}
               <span className="text-[#6734de] font-medium underline decoration-[#6734de]">
                 Performance
               </span>{" "}
@@ -126,7 +140,6 @@ export default function Home() {
                 Qualidade
               </span>{" "}
             </TypographyH4>
-
           </div>
 
           {/* BOTÕES  */}
@@ -167,22 +180,24 @@ export default function Home() {
                 <span>Currículo</span>
               </button>
             </a>
-
           </div>
         </div>
 
         {/* IMAGEM */}
-        <motion.img
-          src={MinhaImagem}
-          alt="Foto de Ryan"
-          className="w-64 md:w-130 rounded-xl object-cover order-1 md:order-2"
-          animate={{ y: [0, -80, 0] }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
+
+        <div className="flex justify-center md:justify-start order-1 md:order-2 md:col-start-2">
+          <motion.img
+            src={MinhaImagem}
+            alt="Foto de Ryan"
+            className="w-90 md:w-130 rounded-xl object-cover order-1 md:order-2"
+            animate={{ y: [0, -80, 0] }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        </div>
       </motion.div>
     </section>
   );
