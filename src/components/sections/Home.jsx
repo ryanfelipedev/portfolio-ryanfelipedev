@@ -2,7 +2,7 @@ import { TypographyH1, TypographyH2, TypographyH4 } from "../ui/typography";
 import MinhaImagem from "@/assets/images/Imagem-Pixelada.png";
 import {motion, useInView} from "framer-motion"
 import {useRef} from "react"
-import SplitText from "../SplitText";
+import SplitText from "../ui/SplitText";
 
 export default function Home() {
   const ref = useRef(null);
@@ -63,7 +63,7 @@ export default function Home() {
                   viewBox="0 0 24 24"
                   fill="currentColor"
                   aria-hidden="true"
-                  className="ml-20 w-10 h-10 text-[#6734de] hover:text-white cursor-pointer"
+                  className="ml-20 w-10 h-10 text-[#6734de] duration-300 hover:text-white cursor-pointer"
                   style={{ willChange: "transform", display: "inline-block" }}
                   animate={{
                     y: [-6, 6, -6],
@@ -88,7 +88,7 @@ export default function Home() {
                 <motion.svg
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   fill="currentColor" aria-hidden="true" className="w-8 h-10
-                  text-[#6734de] hover:text-white cursor-pointer" style=
+                  text-[#6734de] duration-300 hover:text-white cursor-pointer" style=
                   {{ willChange: "transform", display: "inline-block" }}
                   animate=
                   {{
@@ -111,12 +111,13 @@ export default function Home() {
           </div>
 
           <div className="flex flex-col mb-5">
+
             <TypographyH4 className="text-[#e0e1dd] text-left text-lg leading-relaxed max-w-xl">
               Desenvolvedor{" "}
               <span className="text-[#6734de] font-medium underline decoration-[#6734de]">
                 Full-Stack
               </span>{" "}
-              que transforma ideias em aplicações web completas, com foco em{" "}
+              que transforma ideias em aplicações completas, com foco em {" "}
               <span className="text-[#6734de] font-medium underline decoration-[#6734de]">
                 Performance
               </span>{" "}
@@ -124,8 +125,8 @@ export default function Home() {
               <span className="text-[#6734de] font-medium underline decoration-[#6734de]">
                 Qualidade
               </span>{" "}
-              !
             </TypographyH4>
+
           </div>
 
           {/* BOTÕES  */}

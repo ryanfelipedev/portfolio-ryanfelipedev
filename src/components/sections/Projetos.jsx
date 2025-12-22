@@ -1,4 +1,4 @@
-import SplitText from "../SplitText";
+import SplitText from "../ui/SplitText";
 
 export default function Projetos() {
   return (
